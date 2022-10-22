@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/adm_home.css' %}">
+</head>
+
+<body>
+
+    <div class="container-fluid main">
+        <div class="hm"><a href="{% url 'school_admin:hom' %}">
+                <h2>HOME</h2>
+            </a>
+        </div>
+        <div class="add_tr"><a href="{% url 'school_admin:add_tr' %}">
+                <h2>ADD TEACHERS</h2>
+            </a>
+        </div>
+        <div class="view_st"><a href="{% url 'school_admin:view_st' %}">
+                <h2>VIEW STUDENT</h2>
+            </a>
+        </div>
+        <div class="view_tr"><a href="{% url 'school_admin:view_tr' %}">
+                <h2>VIEW TEACHERS</h2>
+            </a>
+        </div>
+        <div class="chg_pwd"><a href="{% url 'school_admin:chg_pwd' %}">
+                <h2>CHANGE PASSWORD</h2>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

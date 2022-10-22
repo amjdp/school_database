@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/add_tr.css' %}">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Add Teacher</div>
+        <form action="#">
+            <div class="user__details">
+
+                <div class="input__box">
+                    <label for="" class="details">Name</label>
+                    <input type="text" placeholder="Enter your Name" required>
+                </div>
+
+                <div class="input__box">
+                    <label for="" class="details">Email</label>
+                    <input type="email" placeholder="Enter Email" required>
+                </div>
+
+                <div class="col-md-12 form-group">
+                    <label for="">Address</label>
+                    <textarea class="form-control mt-3" id="" rows="7">
+                    </textarea>
+                </div>
+
+                <div class="input__box">
+                    <label for="birthdaytime" class="details">DOB</label>
+                    <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                </div>
+
+                <div class="input__box">
+                    <label for="" class="details">Phone Number</label>
+                    <input type="number" placeholder="Enter Phone Number" required>
+                </div>
+
+                <div class="input__box">
+                    <label for="" class="details">Place</label>
+                    <input type="text" placeholder="Enter Place" required>
+                </div>
+
+                <div class="input__box">
+                    <label for="" class="details">Parent Name</label>
+                    <input type="text" placeholder="Enter Parent Name" required>
+                </div>
+
+                <div class="input__box">
+                    <label for="" class="details">Upload Photo</label>
+                    <input type="file" id="st_img" name="st_photo">
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Add Student">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

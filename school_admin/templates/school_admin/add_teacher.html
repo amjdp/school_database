@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/add_tr.css' %}">
+
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="title">Add Teacher</div>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- enctype ---to include image in form -->
+            <!-- csrf_attack -->
+            <div class="user__details">
+                <div class="input__box">
+                    <label for="" class="details">Name</label>
+                    <input type="text" placeholder="Enter your Name" name="teacher_name" required>
+                </div>
+                <div class="input__box">
+                    <label for="" class="details">Email</label>
+                    <input type="email" placeholder="Enter Email" name="teacher_email" required>
+                </div>
+
+                <div class="input__box">
+                    <label for="" class="details">Address</label>
+                    <textarea class="form-control mt-3" id="" rows="7">
+                    </textarea>
+                </div>
+
+                <div class="input__box">
+                    <label for="" class="details">Qualification</label> <br>
+                    <select class="form-select mt-3 form-control" name="qualification" required>
+                        <option selected disabled value="">Select</option>
+                        <option value="MSc,BEd">MSc,BEd</option>
+                        <option value="MSc">MSc</option>
+                        <option value="MSc,NET">MSc,NET</option>
+                    </select>
+                </div>
+
+                <div class="input__box">
+
+                    <label class="details" for="gender">Gender: </label>
+
+                    <input type="radio" name="gender" id="male" required>
+                    <label class="details" for="male">Male</label>
+
+                    <input type="radio" name="gender" id="female" required>
+                    <label class="details" for="female">Female</label>
+                </div>
+
+                <div class="input__box">
+                    <label for="birthdaytime" class="details">DOB</label>
+                    <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                </div>
+
+                <div class="input__box">
+                    <label for="" class="details">Phone Number</label>
+                    <input type="number" placeholder="Enter Phone Number" name="teacher_phone" required>
+                </div>
+                <div class="input__box">
+                    <label for="" class="details">Experience</label>
+                    <input type="text" placeholder="Enter Experoence in years" name="experience" required>
+                </div>
+                <div class="input__box">
+                    <label for="" class="details">Password</label>
+                    <input type="password" name="teacher_password" required>
+                </div>
+
+                <div class="input__box">
+                    <label for="" class="details">Upload Photo</label>
+                    <input type="file" id="st_img" name="tr_photo">
+                </div>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Add Teacher">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
